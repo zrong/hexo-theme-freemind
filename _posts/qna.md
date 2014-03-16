@@ -32,3 +32,14 @@ feature: images/qna/qna.jpg
 * Fork this project, make your change, and then send me your pull request;
 * Since it is public under MIT license, you can make your own theme based on mine. But it will be nicer if you claimed that your work is based on mine in your theme project page.
 
+{% badge Q red %} [Your blog](http://hahack.com) looks a little different to this theme. Why such difference?
+
+{% badge A green %} Yes. I modified the theme a little bit as I open sourced this theme. I actually did some simplification *e.g.* I removed the whole [Wiki](http://hahack.com/wiki) page because I don't think that everybody needs this.
+
+{% badge Q red %} How to generate ToC(Table of Contents) in a certain page?
+
+{% badge A green %} Add `toc: true` in the front-matter.
+
+{% badge Q red %} Where can I find your markdown source files of these docs?
+
+{% badge A green %} In the [source](https://github.com/wzpan/freemind/tree/source) branch.

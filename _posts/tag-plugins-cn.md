@@ -1,5 +1,5 @@
-title: Tag Plugins
-date: 2014-03-16 10:17:16
+title: Tag Plugins（中文）
+date: 2014-03-16 10:10:16
 tags: plugins
 categories: Docs
 description: Introduce tag plugins in freemind.
@@ -7,23 +7,23 @@ feature: images/tag-plugins/plugins.jpg
 toc: true
 ---
 
-The freemind theme offers several new tag plugins, so as to fully take advantages of Bootstrap.
+Freemind 主题提供了丰富的 tag plugins，以充分利用 Bootstrap 的威力。
 
-To use these tag plugins, you need to install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) first. In your blog root folder, execute the following command:
+在使用这些 tag plugins 之前，你需要先安装 [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) 。在你的 Hexo 博客目录，执行下列命令：
 
 ```
-npm install hexo-tag-bootstrap --save
+$ npm install hexo-tag-bootstrap --save
 ```
 
-Then you can use these tag plugins in your blog, as easily as you normally do using hexo tag plugins. 
+然后就可以像使用其他 hexo tag plugins 一样使用这些 Bootstrap tag plugins 了。
 
 <!-- more -->
 
-## Buttons ##
+## 按钮（Buttons） ##
 
-Inserts a button with target links, text and specified color.
+插入一个按钮，按钮可以带有链接、文本，并允许指定颜色。
 
-### Syntax ###
+### 语法 ###
 
 {% raw %}
 ```
@@ -31,7 +31,7 @@ Inserts a button with target links, text and specified color.
 ```
 {% endraw %}
 
-### Examples ###
+### 示例 ###
 
 {% raw %}
 ```
@@ -49,7 +49,7 @@ Inserts a button with target links, text and specified color.
 ```
 {% endraw %}
 
-### Results ###
+### 结果 ###
 
 {% btn http://hahack.com hahack %}
 
@@ -63,11 +63,11 @@ Inserts a button with target links, text and specified color.
 
 {% btn http://hahack.com hahack black %}
 
-## Labels ##
+## 标签（Labels） ##
 
-Inserts a label with text and specified color.
+插入一个标签，并为其指定文本和颜色。
 
-### Syntax ###
+### 语法 ###
 
 {% raw %}
 ```
@@ -75,7 +75,7 @@ Inserts a label with text and specified color.
 ```
 {% endraw %}
 
-### Examples ###
+### 示例 ###
 
 {% raw %}
 ```
@@ -87,7 +87,7 @@ Inserts a label with text and specified color.
 ```
 {% endraw %}
 
-### Results ###
+### 结果 ###
 
 {% label grey %}
 
@@ -101,11 +101,11 @@ Inserts a label with text and specified color.
 
 {% label black black %}
 
-## Badges ##
+## 徽章（Badges） ##
 
-Inserts a label with text and specified color.
+插入一个徽章，并为其指定文本和颜色。
 
-### Syntax ###
+### 语法 ###
 
 {% raw %}
 ```
@@ -113,7 +113,7 @@ Inserts a label with text and specified color.
 ```
 {% endraw %}
 
-### Examples ###
+### 示例 ###
 
 {% raw %}
 ```
@@ -131,7 +131,7 @@ Inserts a label with text and specified color.
 ```
 {% endraw %}
 
-### Results ###
+### 结果 ###
 
 {% badge grey %}
 
@@ -145,11 +145,11 @@ Inserts a label with text and specified color.
 
 {% badge black black %}
 
-## Alerts ##
+## 警告（Alerts） ##
 
-Inserts a label with text and specified color.
+插入一个警告Inserts a label with text and specified color.
 
-### Syntax ###
+### 语法 ###
 
 {% raw %}
 ```
@@ -159,7 +159,7 @@ Inserts a label with text and specified color.
 ```
 {% endraw %}
 
-### Examples ###
+### 示例 ###
 
 {% raw %}
 ```
@@ -173,7 +173,7 @@ Inserts a label with text and specified color.
 ```
 {% endraw %}
 
-### Results ###
+### 结果 ###
 
 {% alert yellow %}Best check yo self, you're not looking too good.{% endalert %}
 
@@ -183,12 +183,12 @@ Inserts a label with text and specified color.
 
 {% alert blue %}This alert needs your attention, but it's not super important.{% endalert %}
 
-## Side Notes ##
+## 边注（Side Notes） ##
 
-One interenting feature in Freemind theme is that you can easily insert a margin note at the right side of the page.
+Freemind 的一个有趣的特性是你可以在页面的侧边插入边注。
 
 {% alert red %}
-To avoid breaking the line after inserting side notes/images, it is recommended to disable the `breaks` option of Markdown. Modified your root `_config.yml` file as:
+为了避免边注文本后面的文字自动折行影响观感，建议禁用 Markdown 的 `breaks` 选项。在你的博客根 `_config.yml` 文件中修改相应部分：
 
 ```
 # Markdown
@@ -205,7 +205,7 @@ markdown:
 
 {% endalert %}
 
-### Syntax ###
+### 语法 ###
 
 {% raw %}
 ```
@@ -215,7 +215,7 @@ markdown:
 ```
 {% endraw %}
 
-### Example ###
+### 示例 ###
 
 {% raw %}
 ```
@@ -223,15 +223,15 @@ See the right side{% sidenote 1 %}This is a side note.{% endsidenote %}.
 ```
 {% endraw %}
 
-### Result ###
+### 结果 ###
 
-See the right side{% sidenote 1 %}This is a side note.{% endsidenote %}.
+见右侧{% sidenote 1 %}这是一个边注。{% endsidenote %}。
 
-## Side Images ##
+## 侧边附图（Side Images） ##
 
-You can also insert a side image at the right side of the page{% sideimg /images/tag-plugins/plugins.jpg 1 %}This is a side image.{% endsideimg %}. 
+类似地，你还可以在侧边插入附图{% sideimg /images/tag-plugins/plugins.jpg 1 %}这是一个侧边附图。{% endsideimg %}。
 
-### Syntax ###
+### 语法 ###
 
 {% raw %}
 ```
@@ -241,7 +241,7 @@ You can also insert a side image at the right side of the page{% sideimg /images
 ```
 {% endraw %}
 
-### Example ###
+### 示例 ###
 
 {% raw %}
 ```
@@ -251,6 +251,6 @@ This is a side image.
 ```
 {% endraw %}
 
-### Result ###
+### 结果 ###
 
-See the right side.
+见右侧。
