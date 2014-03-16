@@ -12,7 +12,7 @@ The freemind theme offers several new tag plugins, so as to fully take advantage
 To use these tag plugins, you need to install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) first. In your blog root folder, execute the following command:
 
 ```
-npm install hexo-tag-bootstrap --save
+$ npm install hexo-tag-bootstrap --save
 ```
 
 Then you can use these tag plugins in your blog, as easily as you normally do using hexo tag plugins. 
@@ -147,7 +147,7 @@ Inserts a label with text and specified color.
 
 ## Alerts ##
 
-Inserts a label with text and specified color.
+Inserts alert messages with text and specified color.
 
 ### Syntax ###
 
@@ -185,7 +185,7 @@ Inserts a label with text and specified color.
 
 ## Side Notes ##
 
-One interenting feature in Freemind theme is that you can easily insert a margin note at the right side of the page.
+One interenting feature in Freemind theme is that you can easily insert a note at the right side of the page.
 
 {% alert red %}
 To avoid breaking the line after inserting side notes/images, it is recommended to disable the `breaks` option of Markdown. Modified your root `_config.yml` file as:
@@ -229,7 +229,7 @@ See the right side{% sidenote 1 %}This is a side note.{% endsidenote %}.
 
 ## Side Images ##
 
-You can also insert a side image at the right side of the page{% sideimg /images/tag-plugins/plugins.jpg 1 %}This is a side image.{% endsideimg %}. 
+You can also insert an image at the right side of the page{% sideimg /images/tag-plugins/plugins.jpg 1 %}This is a side image.{% endsideimg %}. 
 
 ### Syntax ###
 
