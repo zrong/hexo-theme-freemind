@@ -3,7 +3,7 @@ date: 2014-03-16 18:17:16
 tags: Q&A
 categories: Docs
 description: Frequently asked questions and my answers.
-feature: /images/qna/qna.jpg
+feature: images/qna/qna.jpg
 ---
 
 {% badge Q red %} What's `Freemind` stands for?
