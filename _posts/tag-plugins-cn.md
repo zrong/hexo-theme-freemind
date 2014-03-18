@@ -157,7 +157,7 @@ $ npm install hexo-tag-bootstrap --save
 
 插入一个徽章，并为其指定文本。
 
-{% alert red %}徽章在 Internet Explorer 8 中无法使用折叠特效，因为它不支持 `:empty` 选择器。{% endalert %}
+{% alert danger %}徽章在 Internet Explorer 8 中无法使用折叠特效，因为它不支持 `:empty` 选择器。{% endalert %}
 
 ### 语法 ###
 
