@@ -19,6 +19,52 @@ Then you can use these tag plugins in your blog, as easily as you normally do us
 
 <!-- more -->
 
+## Text Color ##
+
+Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.
+
+### Syntax ###
+
+{% raw %}
+```
+{% textcolor [style] %}
+  text string
+{% endtextcolor %}
+```
+{% endraw %}
+
+### Examples ###
+
+{% raw %}
+```
+{% textcolor muted %}Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.{% endtextcolor %}
+
+{% textcolor primary %}Nullam id dolor id nibh ultricies vehicula ut id elit.{% endtextcolor %}
+
+{% textcolor success %}Duis mollis, est non commodo luctus, nisi erat porttitor ligula.{% endtextcolor %}
+
+{% textcolor info %}Maecenas sed diam eget risus varius blandit sit amet non magna.{% endtextcolor %}
+
+{% textcolor warning %}Etiam porta sem malesuada magna mollis euismod.{% endtextcolor %}
+
+{% textcolor danger %}Donec ullamcorper nulla non metus auctor fringilla.{% endtextcolor %}
+```
+{% endraw %}
+
+### Results ###
+
+{% textcolor muted %}Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.{% endtextcolor %}
+
+{% textcolor primary %}Nullam id dolor id nibh ultricies vehicula ut id elit.{% endtextcolor %}
+
+{% textcolor success %}Duis mollis, est non commodo luctus, nisi erat porttitor ligula.{% endtextcolor %}
+
+{% textcolor info %}Maecenas sed diam eget risus varius blandit sit amet non magna.{% endtextcolor %}
+
+{% textcolor warning %}Etiam porta sem malesuada magna mollis euismod.{% endtextcolor %}
+
+{% textcolor danger %}Donec ullamcorper nulla non metus auctor fringilla.{% endtextcolor %}
+
 ## Buttons ##
 
 Inserts a button with target links, text and specified color.
@@ -27,7 +73,7 @@ Inserts a button with target links, text and specified color.
 
 {% raw %}
 ```
-{% btn url text [color] %}
+{% btn url text [style] %}
 ```
 {% endraw %}
 
@@ -37,15 +83,15 @@ Inserts a button with target links, text and specified color.
 ```
 {% btn http://hahack.com hahack %}
 
-{% btn http://hahack.com hahack blue %}
+{% btn http://hahack.com hahack primary %}
 
-{% btn http://hahack.com hahack green %}
+{% btn http://hahack.com hahack success %}
 
-{% btn http://hahack.com hahack yellow %}
+{% btn http://hahack.com hahack warning %}
 
-{% btn http://hahack.com hahack red %}
+{% btn http://hahack.com hahack danger %}
 
-{% btn http://hahack.com hahack black %}
+{% btn http://hahack.com hahack info %}
 ```
 {% endraw %}
 
@@ -53,15 +99,15 @@ Inserts a button with target links, text and specified color.
 
 {% btn http://hahack.com hahack %}
 
-{% btn http://hahack.com hahack blue %}
+{% btn http://hahack.com hahack primary %}
 
-{% btn http://hahack.com hahack green %}
+{% btn http://hahack.com hahack success %}
 
-{% btn http://hahack.com hahack yellow %}
+{% btn http://hahack.com hahack warning %}
 
-{% btn http://hahack.com hahack red %}
+{% btn http://hahack.com hahack danger %}
 
-{% btn http://hahack.com hahack black %}
+{% btn http://hahack.com hahack info %}
 
 ## Labels ##
 
@@ -71,7 +117,7 @@ Inserts a label with text and specified color.
 
 {% raw %}
 ```
-{% label text [color] %}
+{% label text [style] %}
 ```
 {% endraw %}
 
@@ -79,37 +125,45 @@ Inserts a label with text and specified color.
 
 {% raw %}
 ```
-{% label red red %}
+{% label default %}
 
-{% label blue blue %}
+{% label warinng warning %}
 
-{% label black black %}
+{% label success success %}
+
+{% label danger danger %}
+
+{% label primary primary %}
+
+{% label info info %}
 ```
 {% endraw %}
 
 ### Results ###
 
-{% label grey %}
+{% label default %}
 
-{% label yellow yellow %}
+{% label warinng warning %}
 
-{% label green green %}
+{% label success success %}
 
-{% label red red %}
+{% label danger danger %}
 
-{% label blue blue %}
+{% label primary primary %}
 
-{% label black black %}
+{% label info info %}
 
 ## Badges ##
 
-Inserts a label with text and specified color.
+Inserts a badge with text.
+
+{% alert red %}Badges won't self collapse in Internet Explorer 8 because it lacks support for the `:empty` selector.{% endalert %}
 
 ### Syntax ###
 
 {% raw %}
 ```
-{% badge text [color] %}
+{% badge text %}
 ```
 {% endraw %}
 
@@ -117,33 +171,13 @@ Inserts a label with text and specified color.
 
 {% raw %}
 ```
-{% badge grey %}
-
-{% badge yellow yellow %}
-
-{% badge green green %}
-
-{% badge red red %}
-
-{% badge blue blue %}
-
-{% badge black black %}
+{% badge 42 %}
 ```
 {% endraw %}
 
 ### Results ###
 
-{% badge grey %}
-
-{% badge yellow yellow %}
-
-{% badge green green %}
-
-{% badge red red %}
-
-{% badge blue blue %}
-
-{% badge black black %}
+{% badge 42 %}
 
 ## Alerts ##
 
@@ -153,7 +187,7 @@ Inserts alert messages with text and specified color.
 
 {% raw %}
 ```
-{% alert [color] %}
+{% alert [style] %}
    Alert string
 {% endalert %}
 ```
@@ -163,94 +197,23 @@ Inserts alert messages with text and specified color.
 
 {% raw %}
 ```
-{% alert yellow %}Best check yo self, you're not looking too good.{% endalert %}
+{% alert warning %}Best check yo self, you're not looking too good.{% endalert %}
 
-{% alert red %}Change a few things up and try submitting again.{% endalert %}
+{% alert danger %}Change a few things up and try submitting again.{% endalert %}
 
-{% alert green %}You successfully read this important alert message.{% endalert %}
+{% alert success %}You successfully read this important alert message.{% endalert %}
 
-{% alert blue %}This alert needs your attention, but it's not super important.{% endalert %}
+{% alert info %}This alert needs your attention, but it's not super important.{% endalert %}
 ```
 {% endraw %}
 
 ### Results ###
 
-{% alert yellow %}Best check yo self, you're not looking too good.{% endalert %}
+{% alert warning %}Best check yo self, you're not looking too good.{% endalert %}
 
-{% alert red %}Change a few things up and try submitting again.{% endalert %}
+{% alert danger %}Change a few things up and try submitting again.{% endalert %}
 
-{% alert green %}You successfully read this important alert message.{% endalert %}
+{% alert success %}You successfully read this important alert message.{% endalert %}
 
-{% alert blue %}This alert needs your attention, but it's not super important.{% endalert %}
+{% alert info %}This alert needs your attention, but it's not super important.{% endalert %}
 
-## Side Notes ##
-
-One interenting feature in Freemind theme is that you can easily insert a note at the right side of the page.
-
-{% alert red %}
-To avoid breaking the line after inserting side notes/images, it is recommended to disable the `breaks` option of Markdown. Modified your root `_config.yml` file as:
-
-```
-# Markdown
-## https://github.com/chjj/marked
-markdown:
-  gfm: true
-  pedantic: false
-  sanitize: false
-  tables: true
-  breaks: false	# disable breaks option. Recommended!
-  smartLists: true
-  smartypants: true
-```
-
-{% endalert %}
-
-### Syntax ###
-
-{% raw %}
-```
-{% sidenote index %}
-  Side note text
-{% endsidenote %}
-```
-{% endraw %}
-
-### Example ###
-
-{% raw %}
-```
-See the right side{% sidenote 1 %}This is a side note.{% endsidenote %}.
-```
-{% endraw %}
-
-### Result ###
-
-See the right side{% sidenote 1 %}This is a side note.{% endsidenote %}.
-
-## Side Images ##
-
-You can also insert an image at the right side of the page{% sideimg /images/tag-plugins/plugins.jpg 1 %}This is a side image.{% endsideimg %}. 
-
-### Syntax ###
-
-{% raw %}
-```
-{% sideimg url [index] %}
-  Side image text
-{% endsideimg %}
-```
-{% endraw %}
-
-### Example ###
-
-{% raw %}
-```
-{% sideimg /images/tag-plugins/plugins.jpg 1 %}
-This is a side image.
-{% endsideimg %}
-```
-{% endraw %}
-
-### Result ###
-
-See the right side.

@@ -19,15 +19,61 @@ $ npm install hexo-tag-bootstrap --save
 
 <!-- more -->
 
-## 按钮（Buttons） ##
+## 文本颜色 ##
 
-插入一个按钮，按钮可以带有链接、文本，并允许指定颜色。
+插入一段文本，并用特殊的颜色高亮它。
 
 ### 语法 ###
 
 {% raw %}
 ```
-{% btn url text [color] %}
+{% textcolor [style] %}
+  text string
+{% endtextcolor %}
+```
+{% endraw %}
+
+### 示例 ###
+
+{% raw %}
+```
+{% textcolor muted %}Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.{% endtextcolor %}
+
+{% textcolor primary %}Nullam id dolor id nibh ultricies vehicula ut id elit.{% endtextcolor %}
+
+{% textcolor success %}Duis mollis, est non commodo luctus, nisi erat porttitor ligula.{% endtextcolor %}
+
+{% textcolor info %}Maecenas sed diam eget risus varius blandit sit amet non magna.{% endtextcolor %}
+
+{% textcolor warning %}Etiam porta sem malesuada magna mollis euismod.{% endtextcolor %}
+
+{% textcolor danger %}Donec ullamcorper nulla non metus auctor fringilla.{% endtextcolor %}
+```
+{% endraw %}
+
+### 结果 ###
+
+{% textcolor muted %}Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.{% endtextcolor %}
+
+{% textcolor primary %}Nullam id dolor id nibh ultricies vehicula ut id elit.{% endtextcolor %}
+
+{% textcolor success %}Duis mollis, est non commodo luctus, nisi erat porttitor ligula.{% endtextcolor %}
+
+{% textcolor info %}Maecenas sed diam eget risus varius blandit sit amet non magna.{% endtextcolor %}
+
+{% textcolor warning %}Etiam porta sem malesuada magna mollis euismod.{% endtextcolor %}
+
+{% textcolor danger %}Donec ullamcorper nulla non metus auctor fringilla.{% endtextcolor %}
+
+## 按钮（Buttons） ##
+
+插入一个按钮，按钮可以带有链接、文本，并可以指定样式。
+
+### 语法 ###
+
+{% raw %}
+```
+{% btn url text [style] %}
 ```
 {% endraw %}
 
@@ -37,15 +83,15 @@ $ npm install hexo-tag-bootstrap --save
 ```
 {% btn http://hahack.com hahack %}
 
-{% btn http://hahack.com hahack blue %}
+{% btn http://hahack.com hahack primary %}
 
-{% btn http://hahack.com hahack green %}
+{% btn http://hahack.com hahack success %}
 
-{% btn http://hahack.com hahack yellow %}
+{% btn http://hahack.com hahack warning %}
 
-{% btn http://hahack.com hahack red %}
+{% btn http://hahack.com hahack danger %}
 
-{% btn http://hahack.com hahack black %}
+{% btn http://hahack.com hahack info %}
 ```
 {% endraw %}
 
@@ -53,25 +99,25 @@ $ npm install hexo-tag-bootstrap --save
 
 {% btn http://hahack.com hahack %}
 
-{% btn http://hahack.com hahack blue %}
+{% btn http://hahack.com hahack primary %}
 
-{% btn http://hahack.com hahack green %}
+{% btn http://hahack.com hahack success %}
 
-{% btn http://hahack.com hahack yellow %}
+{% btn http://hahack.com hahack warning %}
 
-{% btn http://hahack.com hahack red %}
+{% btn http://hahack.com hahack danger %}
 
-{% btn http://hahack.com hahack black %}
+{% btn http://hahack.com hahack info %}
 
 ## 标签（Labels） ##
 
-插入一个标签，并为其指定文本和颜色。
+插入一个标签，并为其指定文本和样式。
 
 ### 语法 ###
 
 {% raw %}
 ```
-{% label text [color] %}
+{% label text [style] %}
 ```
 {% endraw %}
 
@@ -79,37 +125,45 @@ $ npm install hexo-tag-bootstrap --save
 
 {% raw %}
 ```
-{% label red red %}
+{% label default %}
 
-{% label blue blue %}
+{% label warinng warning %}
 
-{% label black black %}
+{% label success success %}
+
+{% label danger danger %}
+
+{% label primary primary %}
+
+{% label info info %}
 ```
 {% endraw %}
 
 ### 结果 ###
 
-{% label grey %}
+{% label default %}
 
-{% label yellow yellow %}
+{% label warinng warning %}
 
-{% label green green %}
+{% label success success %}
 
-{% label red red %}
+{% label danger danger %}
 
-{% label blue blue %}
+{% label primary primary %}
 
-{% label black black %}
+{% label info info %}
 
 ## 徽章（Badges） ##
 
-插入一个徽章，并为其指定文本和颜色。
+插入一个徽章，并为其指定文本。
+
+{% alert red %}徽章在 Internet Explorer 8 中无法使用折叠特效，因为它不支持 `:empty` 选择器。{% endalert %}
 
 ### 语法 ###
 
 {% raw %}
 ```
-{% badge text [color] %}
+{% badge text %}
 ```
 {% endraw %}
 
@@ -117,43 +171,23 @@ $ npm install hexo-tag-bootstrap --save
 
 {% raw %}
 ```
-{% badge grey %}
-
-{% badge yellow yellow %}
-
-{% badge green green %}
-
-{% badge red red %}
-
-{% badge blue blue %}
-
-{% badge black black %}
+{% badge 42 %}
 ```
 {% endraw %}
 
 ### 结果 ###
 
-{% badge grey %}
+{% badge 42 %}
 
-{% badge yellow yellow %}
+## 警报（Alerts） ##
 
-{% badge green green %}
-
-{% badge red red %}
-
-{% badge blue blue %}
-
-{% badge black black %}
-
-## 警告（Alerts） ##
-
-插入一个警告Inserts a label with text and specified color.
+插入一段警报文本信息，并为其指定样式。
 
 ### 语法 ###
 
 {% raw %}
 ```
-{% alert [color] %}
+{% alert [style] %}
    Alert string
 {% endalert %}
 ```
@@ -163,94 +197,22 @@ $ npm install hexo-tag-bootstrap --save
 
 {% raw %}
 ```
-{% alert yellow %}Best check yo self, you're not looking too good.{% endalert %}
+{% alert warning %}Best check yo self, you're not looking too good.{% endalert %}
 
-{% alert red %}Change a few things up and try submitting again.{% endalert %}
+{% alert danger %}Change a few things up and try submitting again.{% endalert %}
 
-{% alert green %}You successfully read this important alert message.{% endalert %}
+{% alert success %}You successfully read this important alert message.{% endalert %}
 
-{% alert blue %}This alert needs your attention, but it's not super important.{% endalert %}
+{% alert info %}This alert needs your attention, but it's not super important.{% endalert %}
 ```
 {% endraw %}
 
 ### 结果 ###
 
-{% alert yellow %}Best check yo self, you're not looking too good.{% endalert %}
+{% alert warning %}Best check yo self, you're not looking too good.{% endalert %}
 
-{% alert red %}Change a few things up and try submitting again.{% endalert %}
+{% alert danger %}Change a few things up and try submitting again.{% endalert %}
 
-{% alert green %}You successfully read this important alert message.{% endalert %}
+{% alert success %}You successfully read this important alert message.{% endalert %}
 
-{% alert blue %}This alert needs your attention, but it's not super important.{% endalert %}
-
-## 边注（Side Notes） ##
-
-Freemind 的一个有趣的特性是你可以在页面的侧边插入边注。
-
-{% alert red %}
-为了避免边注文本后面的文字自动折行影响观感，建议禁用 Markdown 的 `breaks` 选项。在你的博客根 `_config.yml` 文件中修改相应部分：
-
-```
-# Markdown
-## https://github.com/chjj/marked
-markdown:
-  gfm: true
-  pedantic: false
-  sanitize: false
-  tables: true
-  breaks: false	# disable breaks option. Recommended!
-  smartLists: true
-  smartypants: true
-```
-
-{% endalert %}
-
-### 语法 ###
-
-{% raw %}
-```
-{% sidenote index %}
-  Side note text
-{% endsidenote %}
-```
-{% endraw %}
-
-### 示例 ###
-
-{% raw %}
-```
-See the right side{% sidenote 1 %}This is a side note.{% endsidenote %}.
-```
-{% endraw %}
-
-### 结果 ###
-
-见右侧{% sidenote 1 %}这是一个边注。{% endsidenote %}。
-
-## 侧边附图（Side Images） ##
-
-类似地，你还可以在侧边插入附图{% sideimg /images/tag-plugins/plugins.jpg 1 %}这是一个侧边附图。{% endsideimg %}。
-
-### 语法 ###
-
-{% raw %}
-```
-{% sideimg url [index] %}
-  Side image text
-{% endsideimg %}
-```
-{% endraw %}
-
-### 示例 ###
-
-{% raw %}
-```
-{% sideimg /images/tag-plugins/plugins.jpg 1 %}
-This is a side image.
-{% endsideimg %}
-```
-{% endraw %}
-
-### 结果 ###
-
-见右侧。
+{% alert info %}This alert needs your attention, but it's not super important.{% endalert %}
