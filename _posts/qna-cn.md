@@ -16,10 +16,6 @@ feature: images/qna/qna.jpg
 
 <!-- more -->
 
-{% label Q danger %} Bootstrap 2.3 太老了，为什么不用 3.x 以上的版本？
-
-{% label A success %} 前面说了，我写这个主题的时候 Bootstrap 3.x 还没出现呢。不过我会考虑将来升级到新的版本。（如果我有空的话）。
-
 {% label Q danger %} 为啥还用 CSS 写样式，而不用更高端大气的 stylus ？
 
 {% label A success %} 嗯，stylus 的确很酷。不过我不想再把以前的样式重写成 stylus 了。所以暂时先保留原来的 CSS。

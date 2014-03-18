@@ -16,10 +16,6 @@ feature: images/qna/qna.jpg
 
 <!-- more -->
 
-{% label Q danger %} Bootstrap 2.3 is old, why not Bootstrap 3.x?
-
-{% label A success %} Like I said, I wrote this theme before Bootstrap 3.x is released. But I will consider to upgrade it to 3.x once I have time.
-
 {% label Q danger %} Why use raw CSS stylesheets instead of fashion stylus?
 
 {% label A success %} Yes, stylus is cool. But I don't want to wrote my stylesheets again in stylus. So let's just keep them.
