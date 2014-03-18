@@ -30,7 +30,7 @@ feature: images/qna/qna.jpg
 
 {% label Q danger %} [Your blog](http://hahack.com) looks a little different to this theme. Why such difference?
 
-{% label A success %} Yes. I modified the theme a little bit as I open sourced this theme. I actually did some simplification *e.g.* I removed the whole [Wiki](http://hahack.com/wiki) page because I don't think that everybody needs this.
+{% label A success %} Yes. I modified the theme a little bit as I open sourced this theme. I actually did some simplification *e.g.* I removed the whole [Wiki](http://hahack.com/wiki) page because I don't think that everybody need this.
 
 {% label Q danger %} How to generate ToC(Table of Contents) in a certain page?
 
