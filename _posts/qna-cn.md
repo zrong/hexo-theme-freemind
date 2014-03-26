@@ -24,7 +24,7 @@ feature: images/qna/qna.jpg
 
 {% label A success %} 有人喜欢我的东西我就很高兴咯。如果想做出贡献，你可以：
 
-* 为本主题的 [Github 项目](https://github.com/wzpan/freemind) 加颗星；
+* 为本主题的 [Github 项目](https://github.com/wzpan/hexo-theme-freemind) 加颗星；
 * Fork 这个项目，尽情DIY，然后给我发 pull request;
 * 这个项目遵循 MIT 开源协议，你可以在本主题基础上创建你的主题。不过如果你能在你的主题页面中声明主题基于 Freemind 就再好不过了。
 
@@ -38,4 +38,4 @@ feature: images/qna/qna.jpg
 
 {% label Q danger %} 从哪里可以找到你的这几篇文档的 Markdown 源码？
 
-{% label A success %} 在项目的 [source](https://github.com/wzpan/freemind/tree/source) 分支。
+{% label A success %} 在项目的 [source](https://github.com/wzpan/hexo-theme-freemind/tree/source) 分支。

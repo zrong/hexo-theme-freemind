@@ -24,7 +24,7 @@ feature: images/qna/qna.jpg
 
 {% label A success %} Great that you love it. To devote your contribution, you can:
 
-* Star its [Github project](https://github.com/wzpan/freemind);
+* Star its [Github project](https://github.com/wzpan/hexo-theme-freemind);
 * Fork this project, make your change, and then send me your pull request;
 * Since it is public under MIT license, you can make your own theme based on mine. But it will be nicer if you claimed that your work is based on mine in your theme project page.
 
@@ -38,4 +38,4 @@ feature: images/qna/qna.jpg
 
 {% label Q danger %} Where can I find your markdown source files of these docs?
 
-{% label A success %} In the [source](https://github.com/wzpan/freemind/tree/source) branch.
+{% label A success %} In the [source](https://github.com/wzpan/hexo-theme-freemind/tree/source) branch.
