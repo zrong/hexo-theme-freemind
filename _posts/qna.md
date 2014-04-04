@@ -16,7 +16,7 @@ feature: images/qna/qna.jpg
 
 <!-- more -->
 
-{% label Q danger %} Why use raw CSS stylesheets instead of fashion stylus?
+{% label Q danger %} Why use raw CSS stylesheets instead of more fashionable stylus?
 
 {% label A success %} Yes, stylus is cool. But I don't want to wrote my stylesheets again in stylus. So let's just keep them.
 
