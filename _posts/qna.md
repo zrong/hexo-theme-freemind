@@ -1,8 +1,8 @@
-title: Questions and Answers
-date: 2014-03-16 18:17:16
+title: "Questions and Answers"
+date: "2014-03-16 18:17:16"
 tags: Q&A
 categories: Docs
-description: Frequently asked questions and my answers.
+description: "Frequently asked questions and my answers."
 feature: images/qna/qna.jpg
 ---
 

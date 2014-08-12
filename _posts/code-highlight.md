@@ -1,8 +1,8 @@
-title: Code Highlight
-date: 2014-03-15 20:17:16
+title: "Code Highlight"
+date: "2014-03-15 20:17:16"
 tags: highlight
 categories: Demo
-description: A collection of Hello World applications from helloworld.org.
+description: "A collection of Hello World applications from helloworld.org."
 toc: true
 ---
 

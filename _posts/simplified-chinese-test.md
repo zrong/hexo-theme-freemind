@@ -1,9 +1,9 @@
 title: 简体中文测试
-date: 2013-12-25 20:17:16
+date: "2013-12-25 20:17:16"
 tags: 简体
 categories: Test
 feature: images/观音心经/pusa2.jpg
-description: 观音心经 - 般若波罗蜜多心经。
+description: "观音心经 - 般若波罗蜜多心经。"
 ---
 
 观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。
