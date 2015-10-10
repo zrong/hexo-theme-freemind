@@ -46,7 +46,7 @@ class helloWorld
 
 ## Assembler ##
 
-``` assembler
+``` arm
 #include <stdio.h>
 
 char format[] = "%s %s\n";
@@ -70,9 +70,9 @@ void main( void )
 }
 ```
 
-## C# ##
+## .Net ##
 
-``` C#
+``` cs
 // Hello World .NET
 
 #using <mscorlib.dll>
