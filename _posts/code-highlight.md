@@ -6,6 +6,12 @@ description: "A collection of Hello World applications from helloworld.org."
 toc: true
 ---
 
+## Haskell ##
+
+``` hs
+data Shape = Circle Float | Rectangle Float Float deriving (Show)
+```
+
 ## C ##
 
 ``` c
