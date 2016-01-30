@@ -5,6 +5,7 @@ categories: Docs
 description: "A list of all the official color themes."
 shadow: true
 feature: /hexo-theme-freemind/images/color-themes.png
+toc: true
 ---
 
 Freemind contains luxuriant color themes for your choice. To use one of them, simply modify the `theme` and `inverse` settings from your theme `_config.yml` file *e.g.*
