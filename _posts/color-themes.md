@@ -17,7 +17,7 @@ inverse: true
 
 , where `theme` here indicates which theme you are going to use, and `inverse` here says you want inverse color scheme on some important components such as navigation bar and header title.
 
-User contributions are welcome! If you want to contribute a color theme, you can [fork freemind](https://github.com/wzpan/hexo-theme-freemind/) and send me a pull request.
+User contributions are welcome! If you want to contribute a color theme, you can [fork the dev branch](https://github.com/wzpan/hexo-theme-freemind/tree/dev) . Write a new theme in LESS and send me a pull request.
 
 <!-- more -->
 
