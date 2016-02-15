@@ -65,6 +65,9 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: freemind
 
+# Disqus
+disqus_shortname: hexofm
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
