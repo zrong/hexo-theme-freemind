@@ -34,17 +34,29 @@ $ npm install hexo-tag-bootstrap --save
 ### 示例 ###
 
 ```
-{% textcolor muted %}Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.{% endtextcolor %}
+{% textcolor muted %}
+Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+{% endtextcolor %}
 
-{% textcolor primary %}Nullam id dolor id nibh ultricies vehicula ut id elit.{% endtextcolor %}
+{% textcolor primary %}
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+{% endtextcolor %}
 
-{% textcolor success %}Duis mollis, est non commodo luctus, nisi erat porttitor ligula.{% endtextcolor %}
+{% textcolor success %}
+Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+{% endtextcolor %}
 
-{% textcolor info %}Maecenas sed diam eget risus varius blandit sit amet non magna.{% endtextcolor %}
+{% textcolor info %}
+Maecenas sed diam eget risus varius blandit sit amet non magna.
+{% endtextcolor %}
 
-{% textcolor warning %}Etiam porta sem malesuada magna mollis euismod.{% endtextcolor %}
+{% textcolor warning %}
+Etiam porta sem malesuada magna mollis euismod.
+{% endtextcolor %}
 
-{% textcolor danger %}Donec ullamcorper nulla non metus auctor fringilla.{% endtextcolor %}
+{% textcolor danger %}
+Donec ullamcorper nulla non metus auctor fringilla.
+{% endtextcolor %}
 ```
 
 ### 结果 ###
