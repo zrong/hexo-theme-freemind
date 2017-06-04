@@ -1,0 +1,10 @@
+<div id="<%= rid %>">
+  <p>您的浏览器不支持JavaScript，或者您禁用了JavaScript。</p>
+  <p>请启用浏览器的JavaScript支持。</p>
+  <p>如果您确认启用了JavaScript，请使用下面的链接升级Flash Player到最新版本：</p>
+  <p><a href="http://www.adobe.com/go/getflash/">安装最新的Flash Player插件</a></p>
+</div>
+<script>
+var el = document.getElementById("<%= rid %>");
+swfobject.embedSWF("<%= movie %>", el, <%= width %>, <%= height %>, "<%= fversion %>");
+</script>

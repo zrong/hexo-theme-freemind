@@ -1,7 +1,7 @@
 slogan: "Yet another bootstrap theme."
 
-theme: bootstrap
-inverse: true
+theme: yeti
+inverse: false
 
 menu:
   - title: Archives
@@ -36,11 +36,11 @@ links:
     icon: "fa fa-linkedin"
 
 widgets:
-- search
-- category
-- tagcloud
-- recent_posts  
-- links
+  - search
+  - category
+  - tagcloud
+  - recent_posts  
+  - links
 
 rss: 
 fancybox: true
