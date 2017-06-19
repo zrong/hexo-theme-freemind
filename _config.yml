@@ -59,6 +59,14 @@ baidu_tongji:
 # swiftype_key: ZP2ZSuHgipSZfRyU8uTR
 
 # share widgets
-bdshare: true
+bdshare: false
 jiathis: false
+
+embed:
+  download:
+    info: http://localhost:5000/dl/api/info/%s/
+    go: http://localhost:5000/dl/go/%s/
+    root: http://localhost/blog/uploads
+  pageview:
+    info: http://localhost:5000/pv/api/info/%s/
 
