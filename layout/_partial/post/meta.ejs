@@ -37,6 +37,13 @@
 		</div>
 	<% } %>
 	</div>
+
+	<!-- pageview -->
+    <% if (theme.pageview) { %>
+	<div class="meta-widget">
+        <%- partial('pageview', {postid: item.postid}) %>
+    </div>
+    <% } %>
 	
     <hr>
 	

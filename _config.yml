@@ -67,6 +67,7 @@ embed:
     info: http://localhost:5000/dl/api/info/%s/
     go: http://localhost:5000/dl/go/%s/
     root: http://localhost/blog/uploads
-  pageview:
-    info: http://localhost:5000/pv/api/info/%s/
+
+pageview:
+  info: http://localhost:5000/pv/api/js/%s/
 
