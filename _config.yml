@@ -5,7 +5,7 @@ inverse: false
 
 menu:
   - title: Archives
-    url: archives
+    url: date
     intro: "All the articles."
     icon: "fa fa-archive"
   - title: Categories
@@ -22,30 +22,31 @@ menu:
     icon: "fa fa-user"
 
 links:
-  - title: Freemind
-    url: https://github.com/wzpan/freemind/
-    intro: "Freemind's Github repository."
-    icon: "fa fa-github"
-  - title: "My Github"
-    url: http://www.github.com/wzpan
-    intro: "My Github account."
-    icon: "fa fa-github"
-  - title: "My LinkedIn"
-    url: http://www.linkedin.com/in/hahack
-    intro: "My Linkin account."
-    icon: "fa fa-linkedin"
+  - title: Home
+    url: http://zengrong.net
+    intro: "zrong's blog"
+    icon: "fa fa-home"
+  - title: "西部秋虫"
+    url: http://www.fmser.cn
+    intro: "专注于Flash+FMS技术研究与应用"
+    icon: "fa fa-bug"
 
 widgets:
   - search
   - category
   - tagcloud
-  - recent_posts  
+  - recent_posts
   - links
 
-rss: 
+rss:
 fancybox: true
 favicon: favicon.png
 duoshuo_shortname:
+
+# SOHU Changyan
+changyan:
+  appid: cyrpy0Ose
+  appkey: prod_73c235677a4c8e62e31453be11834285
 
 # Analytics
 google_analytics:
@@ -70,4 +71,3 @@ embed:
 
 pageview:
   info: http://localhost:5000/pv/api/js/%s/
-

@@ -11,6 +11,10 @@ function getRid (pre='rid-') {
 
 function flash (args, content) {
   var obj = yaml.safeLoad(content)
+  if (!obj.movie) {
+    var msg = util.format('找不到 movie 的配置信息:%s, args%j', content, args)
+    throw new Error(msg)
+  }
   if (!obj.rid) {
     obj.rid = getRid('flash-')
   }
@@ -23,6 +27,7 @@ function flash (args, content) {
   if (!obj.height) {
     obj.fversion = 100
   }
+
   //console.log('yaml: %j', obj)
   var templateFile = pathFn.join(dirname, '../layout/_embed/flash.ejs')
   var text = hexo.render.renderSync({path: templateFile}, obj)
@@ -33,7 +38,8 @@ function download (args, content){
   var obj = yaml.safeLoad(content)
   var dlConfig = hexo.theme.config.embed ? hexo.theme.config.embed.download : null
   if (!dlConfig) {
-    throw Error('找不到 download 的配置信息！')
+    var msg = util.format('找不到 download 的配置信息:%s, args:%j', content, args)
+    throw Error(msg)
   }
   obj.infoUrl = util.format(dlConfig.info, obj.id)
   obj.goUrl = util.format(dlConfig.go, obj.id)
