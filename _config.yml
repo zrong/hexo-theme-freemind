@@ -5,20 +5,20 @@ inverse: false
 
 menu:
   - title: Archives
-    url: date
+    url: date/
     intro: "All the articles."
     icon: "fa fa-archive"
   - title: Categories
-    url: categories
+    url: category/
     intro: "All the categories."
     icon: "fa fa-folder"
   - title: Tags
-    url: tags
+    url: tag/
     intro: "All the tags."
     icon: "fa fa-tags"
-  - title: About
-    url: about
-    intro: "About me."
+  - title: Home
+    url: http://zengrong.net
+    intro: "曾嵘的主页"
     icon: "fa fa-user"
 
 links:
@@ -65,9 +65,9 @@ jiathis: false
 
 embed:
   download:
-    info: http://localhost:5000/dl/api/info/%s/
-    go: http://localhost:5000/dl/go/%s/
-    root: http://localhost/blog/uploads
+    info: http://aid.zengrong.net/dl/api/info/%s/
+    go: http://aid.zengrong.net/dl/go/%s/
+    root: http://blog.zengrong.net/uploads
 
 pageview:
-  info: http://localhost:5000/pv/api/js/%s/
+  info: http://aid.zengrong.net/pv/api/js/%s/
