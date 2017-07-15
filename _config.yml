@@ -5,7 +5,7 @@ inverse: false
 
 menu:
   - title: Archives
-    url: date/
+    url: archive/
     intro: "All the articles."
     icon: "fa fa-archive"
   - title: Categories
@@ -20,16 +20,21 @@ menu:
     url: http://zengrong.net
     intro: "曾嵘的主页"
     icon: "fa fa-user"
+  - title: Links
+    url: link/
+    intro: "友情链接"
+    icon: "fa fa-link"
 
-links:
-  - title: Home
-    url: http://zengrong.net
-    intro: "zrong's blog"
-    icon: "fa fa-home"
-  - title: "西部秋虫"
-    url: http://www.fmser.cn
-    intro: "专注于Flash+FMS技术研究与应用"
-    icon: "fa fa-bug"
+# 启用单独的 link 页面，不再需要这个 widget 了
+# links:
+#   - title: Home
+#     url: http://zengrong.net
+#     intro: "zrong's blog"
+#     icon: "fa fa-home"
+#   - title: "西部秋虫"
+#     url: http://www.fmser.cn
+#     intro: "专注于Flash+FMS技术研究与应用"
+#     icon: "fa fa-bug"
 
 widgets:
   - search
@@ -53,8 +58,8 @@ google_analytics:
   enable: false
   siteid:
 baidu_tongji:
-  enable: false
-  siteid:
+  enable: true
+  siteid: 1d762cb3a96c330d5f860573627e073b
 
 # search
 # swiftype_key: ZP2ZSuHgipSZfRyU8uTR
