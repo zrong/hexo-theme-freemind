@@ -1,13 +1,46 @@
 
-<a id="gotop" href="#">   
-  <span>▲</span> 
+<a id="gotop" href="#">
+  <span>▲</span>
 </a>
 
 <script src="<%- config.root %>js/jquery.imagesloaded.min.js"></script>
 <script src="<%- config.root %>js/gallery.js"></script>
 <script src="<%- config.root %>js/bootstrap.min.js"></script>
 <script src="<%- config.root %>js/main.js"></script>
-<script src="<%- config.root %>js/search.js"></script> 
+
+<% if (theme.search.local) { %>
+<script src="<%- config.root %>js/search.js"></script>
+<script>
+var search_path = "<%= config.search.path %>";
+if (search_path.length == 0) {
+	search_path = "search.xml";
+}
+var path = "<%= config.root %>" + search_path;
+ searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+<% } else if(theme.search.baidu) { %>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<% } else if(theme.search.qihoo) { %>
+<script>
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?229e04cf483b1a5bb60d4acf0ada1657":"https://jspassport.ssl.qhimg.com/11.0.1.js?229e04cf483b1a5bb60d4acf0ada1657";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+<% } %>
 
 <% if (theme.fancybox){ %>
 <link rel="stylesheet" href="<%- config.root %>fancybox/jquery.fancybox.css" media="screen" type="text/css">
@@ -17,15 +50,4 @@
   $('.fancybox').fancybox();
 })(jQuery);
 </script>
-<% } %>
-
-<% if (config.search) { %>
-   <script type="text/javascript">      
-     var search_path = "<%= config.search.path %>";
-	 if (search_path.length == 0) {
-	 	search_path = "search.xml";
-	 }
-	 var path = "<%= config.root %>" + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-   </script>
 <% } %>

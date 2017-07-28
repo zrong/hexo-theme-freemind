@@ -1,14 +1,37 @@
-<% if (theme.swiftype_key) { %>
+<% if (theme.search.swiftype_key) { %>
   <div class="form-group has-success has-feedback" id="site_search">
     <form class="site-search-form">
         <input type="text" id="st-search-input" name="q" results="0" placeholder="<%= __('search') %>" class="st-search-input st-default-search-input form-control" />
     </form>
-  </div>  
-<% } else { %>
+  </div>
+<% } else if(theme.search.local) { %>
   <div id="site_search">
    <div class="form-group">
     <input type="text" id="local-search-input" name="q" results="0" placeholder="<%= __('search') %>" class="st-search-input st-default-search-input form-control"/>
-   </div>  
+   </div>
   <div id="local-search-result"></div>
+  </div>
+<% } else if(theme.search.baidu) { %>
+  <script>(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=10864149031117199823' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+<% } else if(theme.search.qihoo) { %>
+  <style type="text/css">
+    #so360{white-space:nowrap}
+    #so360 form{margin:0;padding:0}
+    #so360_keyword{width:180px;height:24px;line-height:24px;font:14px arial;padding:
+    2px 5px;margin-right:5px;border:2px solid #B3B3B3;outline:0;vertical-align:middle}
+    #so360_submit{width:60px;height:32px;border:0;color:#fff;
+     background:#B3B3B3;font-weight:bold;font:bold 14px arial;padding:0;
+     padding-top:3px\9;cursor:pointer;
+    vertical-align:middle}
+  </style>
+  <div id="so360">
+      <form action="http://www.so.com/s" target="_blank" id="so360form">
+     <input type="text" autocomplete="off" name="q" id="so360_keyword">
+          <input type="submit" id="so360_submit" value="搜 索">
+          <input type="hidden" name="ie" value="utf8">
+          <input type="hidden" name="src" value="blog.zengrong.net">
+          <input type="hidden" name="site" value="zengrong.net">
+          <input type="hidden" name="rg" value="1">
+      </form>
   </div>
 <% } %>

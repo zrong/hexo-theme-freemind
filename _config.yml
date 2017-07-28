@@ -31,17 +31,13 @@ menu:
 #     url: http://zengrong.net
 #     intro: "zrong's blog"
 #     icon: "fa fa-home"
-#   - title: "西部秋虫"
-#     url: http://www.fmser.cn
-#     intro: "专注于Flash+FMS技术研究与应用"
-#     icon: "fa fa-bug"
 
 widgets:
   - search
   - category
   - tagcloud
   - recent_posts
-  - links
+#  - links
 
 rss:
 fancybox: true
@@ -62,7 +58,11 @@ baidu_tongji:
   siteid: 1d762cb3a96c330d5f860573627e073b
 
 # search
-# swiftype_key: ZP2ZSuHgipSZfRyU8uTR
+search:
+  #baidu: true
+  qihoo: true
+  #swiftype_key: ZP2ZSuHgipSZfRyU8uTR
+  #local: true
 
 # share widgets
 bdshare: false
