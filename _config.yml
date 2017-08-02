@@ -70,9 +70,9 @@ jiathis: false
 
 embed:
   download:
-    info: http://aid.zengrong.net/dl/api/info/%s/
-    go: http://aid.zengrong.net/dl/go/%s/
-    root: http://blog.zengrong.net/uploads
+    info: https://aid.zengrong.net/dl/api/info/%s/
+    go: https://aid.zengrong.net/dl/go/%s/
+    root: https://blog.zengrong.net/uploads
 
 pageview:
-  info: http://aid.zengrong.net/pv/api/js/%s/
+  info: https://aid.zengrong.net/pv/api/js/%s/
