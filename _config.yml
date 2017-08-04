@@ -1,4 +1,4 @@
-slogan: "Yet another bootstrap theme."
+slogan: "Every man dies but not every man really lives."
 
 theme: yeti
 inverse: false
@@ -17,7 +17,7 @@ menu:
     intro: "All the tags."
     icon: "fa fa-tags"
   - title: Home
-    url: http://zengrong.net
+    url: https://zengrong.net
     intro: "曾嵘的主页"
     icon: "fa fa-user"
   - title: Links
@@ -51,8 +51,8 @@ changyan:
 
 # Analytics
 google_analytics:
-  enable: false
-  siteid:
+  enable: true
+  siteid: UA-178999-6
 baidu_tongji:
   enable: true
   siteid: 1d762cb3a96c330d5f860573627e073b
