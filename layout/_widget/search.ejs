@@ -1,4 +1,4 @@
-<% if (theme.search.swiftype_key) { %>
+<% if (theme.search.swiftype) { %>
   <div class="form-group has-success has-feedback" id="site_search">
     <form class="site-search-form">
         <input type="text" id="st-search-input" name="q" results="0" placeholder="<%= __('search') %>" class="st-search-input st-default-search-input form-control" />
@@ -34,4 +34,17 @@
           <input type="hidden" name="rg" value="1">
       </form>
   </div>
+<% } else if(theme.search.google) { %>
+<script>
+  (function() {
+    var cx = '<%= theme.search.google %>';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox></gcse:searchbox>
 <% } %>

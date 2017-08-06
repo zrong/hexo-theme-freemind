@@ -4,6 +4,10 @@ theme: yeti
 inverse: false
 
 menu:
+  - title: Search
+    url: search/
+    intro: "搜索"
+    icon: "fa fa-search"
   - title: Archives
     url: archive/
     intro: "All the articles."
@@ -16,14 +20,14 @@ menu:
     url: tag/
     intro: "All the tags."
     icon: "fa fa-tags"
-  - title: Home
-    url: https://zengrong.net
-    intro: "曾嵘的主页"
-    icon: "fa fa-user"
   - title: Links
     url: link/
     intro: "友情链接"
     icon: "fa fa-link"
+  - title: Home
+    url: https://zengrong.net
+    intro: "曾嵘的主页"
+    icon: "fa fa-user"
 
 # 启用单独的 link 页面，不再需要这个 widget 了
 # links:
@@ -59,10 +63,11 @@ baidu_tongji:
 
 # search
 search:
-  #baidu: true
+  # baidu: true
+  # swiftype: ZP2ZSuHgipSZfRyU8uTR
+  # local: true
   qihoo: true
-  #swiftype_key: ZP2ZSuHgipSZfRyU8uTR
-  #local: true
+  # google: 010248203365983979668:happqssy-hw
 
 # share widgets
 bdshare: false
