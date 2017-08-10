@@ -28,6 +28,11 @@
 		 </div> <!-- alert -->
 	  <% } %>
 
+    <% if (post) { %>
+      <%- toc(page.content, {class: 'post-toc', list_number: false}) %>
+      <hr>
+    <% } %>
+
 	  <%- item.content %>
 	</div>
 
