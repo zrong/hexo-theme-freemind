@@ -63,10 +63,11 @@ baidu_tongji:
 
 # search
 search:
-  # baidu: true
-  # swiftype: ZP2ZSuHgipSZfRyU8uTR
   # local: true
-  qihoo: true
+  # swiftype: ZP2ZSuHgipSZfRyU8uTR
+  bing: true
+  # baidu: true
+  # qihoo: true
   # google: 010248203365983979668:happqssy-hw
 
 # share widgets

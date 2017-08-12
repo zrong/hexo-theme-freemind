@@ -3,10 +3,7 @@
   <span>▲</span>
 </a>
 
-<script src="<%- config.root %>js/jquery.imagesloaded.min.js"></script>
-<script src="<%- config.root %>js/gallery.js"></script>
-<script src="<%- config.root %>js/bootstrap.min.js"></script>
-<script src="<%- config.root %>js/main.js"></script>
+<%- js(['js/jquery.imagesloaded.min.js', 'js/gallery.js', 'js/bootstrap.min.js', 'js/main.js']) %>
 
 <% if (theme.search.local) { %>
 <script src="<%- config.root %>js/search.js"></script>
@@ -16,8 +13,34 @@ if (search_path.length == 0) {
 	search_path = "search.xml";
 }
 var path = "<%= config.root %>" + search_path;
- searchFunc(path, 'local-search-input', 'local-search-result');
+searchFunc(path, 'local-search-input', 'local-search-result');
 </script>
+<% } else if (theme.search.bing) { %>
+<script>
+  var bing = $('#bing_search_form')
+  var input = $('#bing_search_input')
+  var prefix = 'site:blog.zengrong.net '
+  bing.submit(function(e) {
+    var q = input.val()
+    if (q.indexOf(prefix) === -1) {
+      input.val(prefix + q)
+    }
+  })
+  input.click(function(e){
+    if (input.val().indexOf(prefix) === 0) {
+      input.val('')
+    }
+  })
+</script>
+<% } else if (theme.search.swiftype) { %>
+  <script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '<%= theme.search.swiftype %>','2.0.0');
+  </script>
 <% } else if(theme.search.baidu) { %>
 <script>
 (function(){

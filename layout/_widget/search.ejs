@@ -1,15 +1,23 @@
-<% if (theme.search.swiftype) { %>
+<% if(theme.search.local) { %>
+  <div id="site_search">
+    <div class="form-group">
+      <input type="text" id="local-search-input" name="q" results="0" placeholder="<%= __('search') %>" class="st-search-input st-default-search-input form-control"/>
+    </div>
+    <div id="local-search-result"></div>
+  </div>
+<% } else if (theme.search.swiftype) { %>
   <div class="form-group has-success has-feedback" id="site_search">
     <form class="site-search-form">
         <input type="text" id="st-search-input" name="q" results="0" placeholder="<%= __('search') %>" class="st-search-input st-default-search-input form-control" />
     </form>
   </div>
-<% } else if(theme.search.local) { %>
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="<%= __('search') %>" class="st-search-input st-default-search-input form-control"/>
-   </div>
-  <div id="local-search-result"></div>
+<% } else if(theme.search.bing) { %>
+  <div id="bing_search">
+    <form id='bing_search_form' target="_blank" action="https://cn.bing.com/search">
+      <div class="form-group">
+        <input type="text" id="bing_search_input" name="q" results="0" placeholder="<%= __('search') %>" class="st-search-input st-default-search-input form-control"/>
+      </div>
+    </form>
   </div>
 <% } else if(theme.search.baidu) { %>
   <script>(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=10864149031117199823' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
