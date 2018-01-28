@@ -1,36 +1,16 @@
-<div id="<%= rid %>">
-  <button id="btn-<%= rid %>"><%= title %></button>
+<% for (var i=0; i<id.length; i++) { %>
+<div id="dl-<%= id[i] %>">
+  <button id="btn-<%= id[i] %>"><%= title %></button>
 </div>
+<% } %>
 <script>
-var rid = '#<%= rid %>'
-$('#btn-<%= rid %>').click(function(e){
-    $.getJSON('<%= infoUrl %>', function(data){
-        if (data.error) {
-          $(rid).text(data.message)
-          $(rid).addClass('bg-danger')
-        }
-        else{
-          $(rid).empty()
-          $(rid).addClass('bg-info')
-          var ul = $('<ul>')
-          ul.append($('<li>').text(data.file_name))
-          ul.append($('<li>').text(data.file_date))
-          ul.append($('<li>').text(data.file_hits))
-          if (data.file_des) {
-            ul.append($('<li>').text(data.file_des))
-          }
-          // TODO file的值可能是相对路径，需要判断
-          var file = null
-          if (data.file.indexOf('http') === 0) {
-            file = data.file
-          }
-          else {
-            file = '<%= goUrl %>'
-          }
-          var a = '<a href="' + file +'" target="_blank">下载文件</a>'
-          ul.append($('<li>').html(a))
-          $(rid).append(ul)
-        }
-      })
-  })
+<% for (var i=0; i<id.length; i++) { %>
+$('#btn-<%= id[i] %>').click(function(e){
+  if (download === undefined) {
+    alert('找不到 download 函数')
+  } else {
+    download('<%= id[i] %>')
+  }
+})
+<% } %>
 </script>
